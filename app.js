@@ -20,7 +20,7 @@ bot.onText(/\/start/, (msg) => {
   const username = msg.from.username;
   const messageText = msg.text;
   
-  bot.sendMessage(chatId, `👋 Hello ${msg.from.first_name}, I'm 𝐋𝐄𝐎 - 𝐌𝐔𝐒𝐈𝐂 𝐁𝐎𝐓\n\n⭐️ 𝙎𝙚𝙣𝙙 𝙮𝙤𝙪𝙧 𝙮𝙤𝙪𝙩𝙪𝙗𝙚 𝙡𝙞𝙣𝙠 ⭐️\n\n🪪 My username - @dhanilka_yt_bot \n\n▪️ How to use this bot 👇 \n\n/help - Get instructions on how to use LEO\n\n/turtorial - Get the video tutorial for using LEO\n\n leomusicbot v 1.0(beta) \n Bot by - @dhanilka`);
+ 
 
 });
 
@@ -136,6 +136,12 @@ bot.on('message', (msg) => {
   } else if(messageText === "/tutorial") {
     bot.sendMessage(chatId,"Here's the tutorial")
     bot.sendVideo(chatId,'./tutorial.MP4')
+
+  }else if(messageText === "/start"){
+    bot.sendMessage(chatId, `👋 Hello ${msg.from.first_name}, I'm 𝐋𝐄𝐎 - 𝐌𝐔𝐒𝐈𝐂 𝐁𝐎𝐓\n\n⭐️ 𝙎𝙚𝙣𝙙 𝙮𝙤𝙪𝙧 𝙮𝙤𝙪𝙩𝙪𝙗𝙚 𝙡𝙞𝙣𝙠 ⭐️\n\n🪪 My username - @dhanilka_yt_bot \n\n▪️ How to use this bot 👇 \n\n/help - Get instructions on how to use LEO\n\n/turtorial - Get the video tutorial for using LEO\n\n leomusicbot v 1.0(beta) \n Bot by - @dhanilka`);
+  }else{
+    bot.sendMessage(chatId,`Sorry ${msg.from.first_name} , Invaild Command`);
+    bot.sendMessage(chatId, `Hi ${firstName}, How to use this bot?\n\n⭐️𝐒𝐞𝐧𝐝 𝐲𝐨𝐮𝐭𝐮𝐛𝐞 𝐥𝐢𝐧𝐤 𝐭𝐨 𝐜𝐨𝐧𝐯𝐞𝐫𝐭⭐️ \n\n OR \n\nType @vid<space>Search your video \nex: @vid shape of you\n\nIf you have any problem using @vid \n\n Enter /tutorial - Get video tutorial for how to use @vid`)
   }
 });
 
